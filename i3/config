@@ -14,6 +14,7 @@ for_window [class="Thunar"] floating enable
 for_window [class="Nautilus"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="Arcade"] floating enable
+for_window [class="Bomberman"] floating enable
 for_window [class="plazza"] floating enable
 for_window [class="Plazza"] floating enable
 for_window [class="Lemipc"] floating enable
@@ -32,14 +33,14 @@ new_window normal
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec rofi -show drun -show-icons -terminal terminator
+bindsym $mod+d exec rofi -show drun -show-icons -terminal i3-sensible-terminal
 
 # Network Manager applet
 exec --no-startup-id nm-applet
@@ -205,4 +206,4 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 10"
 #Touchpad synaptic
 exec_always --no-startup-id synclient TapButton1=1
 
-bindsym $mod+l exec i3lock -i ~/Pictures/lock.jpg
+bindsym $mod+l exec betterlockscreen -l

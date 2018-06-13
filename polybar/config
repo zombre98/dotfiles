@@ -63,7 +63,7 @@ font-4 = MaterialIcons:size=10;-1
 font-5 = Termsynu:size=8:antialias=false;0
 
 modules-left = i3
-modules-right = cpu memory
+modules-right = filesystem cpu memory
 
 ;[module/xbacklight]
 ;type = internal/xbacklight
@@ -341,5 +341,14 @@ interval = 5
 format-underline = #1db954
 exec = ~/.config/polybar/spotify.sh
 
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted =  %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
 
 ; vim:ft=dosini
