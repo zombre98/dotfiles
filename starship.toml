@@ -1,0 +1,59 @@
+prompt_order = [
+  "username",
+  "hostname",
+  "kubernetes",
+  "directory",
+  "git_branch",
+  "git_state",
+  "git_status",
+  "package",
+  "dotnet",
+  "golang",
+  "java",
+  "nodejs",
+  "python",
+  "ruby",
+  "rust",
+  "nix_shell",
+  "conda",
+  "memory_usage",
+  "aws",
+  "env_var",
+  "cmd_duration",
+  "line_break",
+  "jobs",
+  "time",
+  "character",
+  "battery",
+]
+
+[character]
+symbol = "⎇ "
+error_symbol = "✗"
+use_symbol_for_status = true
+vicmd_symbol = "Λ"
+
+[cmd_duration]
+prefix = ""
+
+[battery]
+full_symbol = "⚡️" 
+charging_symbol = ""
+discharging_symbol = ""
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[git_branch]
+symbol = ""
+
+[git_status]
+prefix = ""
+suffix = ""
+
+
+[directory]
+truncation_length = 1
+style = "bold white"
+
